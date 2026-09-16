@@ -1,0 +1,26 @@
+{
+  "experiment_name": "ArogyaTwin DTN Relay Sub-Experiment",
+  "description": "Sensitivity of ArogyaTwin's expiry/trust layer to underlying opportunistic relay strategy. Compares three DTN routing protocols (Epidemic, binary Spray-and-Wait, PRoPHET) with and without ArogyaTwin per-packet expiry check. Separate from the main 30-trial experiment.",
+  "n_trials": 15,
+  "seed_offset": 7000,
+  "seed_range": "7000-7014",
+  "protocols": [
+    "epidemic",
+    "spray",
+    "prophet"
+  ],
+  "modes": {
+    "naive": "no expiry check",
+    "expiry_aware": "ArogyaTwin TTL expiry applied before relay"
+  },
+  "source_file": "dtn.py",
+  "canonical_imports": "from sim.core import ...",
+  "packet_size_bytes": 64,
+  "ttl_routine_h": 18,
+  "ttl_candidate_h": 30,
+  "statistical_method": "t-distribution 95% CI, ddof=1",
+  "n_successful": 90,
+  "n_failed": 0,
+  "execution_timestamp": "2026-09-16T12:19:59.569189",
+  "relationship_to_main_experiment": "SEPARATE. Main experiment: 30 trials, seeds 8000-8029, run_trial() in engine.py. DTN experiment: 15 trials, seeds 7000-7014, run_protocol() in dtn.py."
+}

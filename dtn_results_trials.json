@@ -1,0 +1,1622 @@
+[
+  {
+    "trial": 0,
+    "seed": 7000,
+    "protocol": "epidemic",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 5525,
+      "n_stale_copies": 1411,
+      "stale_copy_rate": 0.2553846153846154,
+      "total_bytes": 353600,
+      "stale_bytes": 90304,
+      "n_delivered": 717,
+      "n_generated": 1196,
+      "delivery_ratio": 0.5994983277591973,
+      "mean_valid_latency": 3.6340782122905027
+    }
+  },
+  {
+    "trial": 0,
+    "seed": 7000,
+    "protocol": "epidemic",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 4261,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 272704,
+      "stale_bytes": 0,
+      "n_delivered": 740,
+      "n_generated": 1196,
+      "delivery_ratio": 0.6187290969899666,
+      "mean_valid_latency": 3.9554054054054055
+    }
+  },
+  {
+    "trial": 0,
+    "seed": 7000,
+    "protocol": "spray",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3657,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 234048,
+      "stale_bytes": 0,
+      "n_delivered": 1193,
+      "n_generated": 1196,
+      "delivery_ratio": 0.9974916387959866,
+      "mean_valid_latency": 2.6493288590604025
+    }
+  },
+  {
+    "trial": 0,
+    "seed": 7000,
+    "protocol": "spray",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3559,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 227776,
+      "stale_bytes": 0,
+      "n_delivered": 1191,
+      "n_generated": 1196,
+      "delivery_ratio": 0.995819397993311,
+      "mean_valid_latency": 2.5130142737195635
+    }
+  },
+  {
+    "trial": 0,
+    "seed": 7000,
+    "protocol": "prophet",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 8211,
+      "n_stale_copies": 5130,
+      "stale_copy_rate": 0.6247716477895506,
+      "total_bytes": 525504,
+      "stale_bytes": 328320,
+      "n_delivered": 735,
+      "n_generated": 1196,
+      "delivery_ratio": 0.6145484949832776,
+      "mean_valid_latency": 4.2574931880108995
+    }
+  },
+  {
+    "trial": 0,
+    "seed": 7000,
+    "protocol": "prophet",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3004,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 192256,
+      "stale_bytes": 0,
+      "n_delivered": 720,
+      "n_generated": 1196,
+      "delivery_ratio": 0.6020066889632107,
+      "mean_valid_latency": 4.729166666666667
+    }
+  },
+  {
+    "trial": 1,
+    "seed": 7001,
+    "protocol": "epidemic",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 5750,
+      "n_stale_copies": 1460,
+      "stale_copy_rate": 0.2539130434782609,
+      "total_bytes": 368000,
+      "stale_bytes": 93440,
+      "n_delivered": 741,
+      "n_generated": 1215,
+      "delivery_ratio": 0.6098765432098765,
+      "mean_valid_latency": 3.6359945872801083
+    }
+  },
+  {
+    "trial": 1,
+    "seed": 7001,
+    "protocol": "epidemic",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 4290,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 274560,
+      "stale_bytes": 0,
+      "n_delivered": 746,
+      "n_generated": 1215,
+      "delivery_ratio": 0.6139917695473252,
+      "mean_valid_latency": 3.599195710455764
+    }
+  },
+  {
+    "trial": 1,
+    "seed": 7001,
+    "protocol": "spray",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3683,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 235712,
+      "stale_bytes": 0,
+      "n_delivered": 1211,
+      "n_generated": 1215,
+      "delivery_ratio": 0.9967078189300411,
+      "mean_valid_latency": 2.5450041288191576
+    }
+  },
+  {
+    "trial": 1,
+    "seed": 7001,
+    "protocol": "spray",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3670,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 234880,
+      "stale_bytes": 0,
+      "n_delivered": 1209,
+      "n_generated": 1215,
+      "delivery_ratio": 0.9950617283950617,
+      "mean_valid_latency": 2.6269644334160462
+    }
+  },
+  {
+    "trial": 1,
+    "seed": 7001,
+    "protocol": "prophet",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 8174,
+      "n_stale_copies": 5208,
+      "stale_copy_rate": 0.6371421580621482,
+      "total_bytes": 523136,
+      "stale_bytes": 333312,
+      "n_delivered": 749,
+      "n_generated": 1215,
+      "delivery_ratio": 0.6164609053497943,
+      "mean_valid_latency": 4.399460188933873
+    }
+  },
+  {
+    "trial": 1,
+    "seed": 7001,
+    "protocol": "prophet",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3063,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 196032,
+      "stale_bytes": 0,
+      "n_delivered": 758,
+      "n_generated": 1215,
+      "delivery_ratio": 0.6238683127572017,
+      "mean_valid_latency": 4.350923482849605
+    }
+  },
+  {
+    "trial": 2,
+    "seed": 7002,
+    "protocol": "epidemic",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 5798,
+      "n_stale_copies": 1468,
+      "stale_copy_rate": 0.2531907554329079,
+      "total_bytes": 371072,
+      "stale_bytes": 93952,
+      "n_delivered": 748,
+      "n_generated": 1199,
+      "delivery_ratio": 0.6238532110091743,
+      "mean_valid_latency": 3.9731543624161074
+    }
+  },
+  {
+    "trial": 2,
+    "seed": 7002,
+    "protocol": "epidemic",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 4181,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 267584,
+      "stale_bytes": 0,
+      "n_delivered": 721,
+      "n_generated": 1199,
+      "delivery_ratio": 0.6013344453711427,
+      "mean_valid_latency": 3.517337031900139
+    }
+  },
+  {
+    "trial": 2,
+    "seed": 7002,
+    "protocol": "spray",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3647,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 233408,
+      "stale_bytes": 0,
+      "n_delivered": 1185,
+      "n_generated": 1199,
+      "delivery_ratio": 0.9883236030025021,
+      "mean_valid_latency": 2.5874894336432797
+    }
+  },
+  {
+    "trial": 2,
+    "seed": 7002,
+    "protocol": "spray",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3442,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 220288,
+      "stale_bytes": 0,
+      "n_delivered": 1189,
+      "n_generated": 1199,
+      "delivery_ratio": 0.9916597164303587,
+      "mean_valid_latency": 2.460891505466779
+    }
+  },
+  {
+    "trial": 2,
+    "seed": 7002,
+    "protocol": "prophet",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 7942,
+      "n_stale_copies": 4911,
+      "stale_copy_rate": 0.6183580961974314,
+      "total_bytes": 508288,
+      "stale_bytes": 314304,
+      "n_delivered": 746,
+      "n_generated": 1199,
+      "delivery_ratio": 0.622185154295246,
+      "mean_valid_latency": 4.417004048582996
+    }
+  },
+  {
+    "trial": 2,
+    "seed": 7002,
+    "protocol": "prophet",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3141,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 201024,
+      "stale_bytes": 0,
+      "n_delivered": 736,
+      "n_generated": 1199,
+      "delivery_ratio": 0.6138448707256047,
+      "mean_valid_latency": 4.619565217391305
+    }
+  },
+  {
+    "trial": 3,
+    "seed": 7003,
+    "protocol": "epidemic",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 5755,
+      "n_stale_copies": 1354,
+      "stale_copy_rate": 0.23527367506516073,
+      "total_bytes": 368320,
+      "stale_bytes": 86656,
+      "n_delivered": 756,
+      "n_generated": 1220,
+      "delivery_ratio": 0.6196721311475409,
+      "mean_valid_latency": 3.8357615894039734
+    }
+  },
+  {
+    "trial": 3,
+    "seed": 7003,
+    "protocol": "epidemic",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 4334,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 277376,
+      "stale_bytes": 0,
+      "n_delivered": 751,
+      "n_generated": 1220,
+      "delivery_ratio": 0.6155737704918033,
+      "mean_valid_latency": 3.8535286284953396
+    }
+  },
+  {
+    "trial": 3,
+    "seed": 7003,
+    "protocol": "spray",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3694,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 236416,
+      "stale_bytes": 0,
+      "n_delivered": 1218,
+      "n_generated": 1220,
+      "delivery_ratio": 0.9983606557377049,
+      "mean_valid_latency": 2.4761904761904763
+    }
+  },
+  {
+    "trial": 3,
+    "seed": 7003,
+    "protocol": "spray",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3706,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 237184,
+      "stale_bytes": 0,
+      "n_delivered": 1209,
+      "n_generated": 1220,
+      "delivery_ratio": 0.990983606557377,
+      "mean_valid_latency": 2.6799007444168734
+    }
+  },
+  {
+    "trial": 3,
+    "seed": 7003,
+    "protocol": "prophet",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 8345,
+      "n_stale_copies": 5539,
+      "stale_copy_rate": 0.6637507489514679,
+      "total_bytes": 534080,
+      "stale_bytes": 354496,
+      "n_delivered": 743,
+      "n_generated": 1220,
+      "delivery_ratio": 0.6090163934426229,
+      "mean_valid_latency": 4.296598639455782
+    }
+  },
+  {
+    "trial": 3,
+    "seed": 7003,
+    "protocol": "prophet",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3010,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 192640,
+      "stale_bytes": 0,
+      "n_delivered": 730,
+      "n_generated": 1220,
+      "delivery_ratio": 0.5983606557377049,
+      "mean_valid_latency": 4.808219178082192
+    }
+  },
+  {
+    "trial": 4,
+    "seed": 7004,
+    "protocol": "epidemic",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 5490,
+      "n_stale_copies": 1281,
+      "stale_copy_rate": 0.23333333333333334,
+      "total_bytes": 351360,
+      "stale_bytes": 81984,
+      "n_delivered": 728,
+      "n_generated": 1195,
+      "delivery_ratio": 0.6092050209205021,
+      "mean_valid_latency": 3.7148760330578514
+    }
+  },
+  {
+    "trial": 4,
+    "seed": 7004,
+    "protocol": "epidemic",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 4133,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 264512,
+      "stale_bytes": 0,
+      "n_delivered": 730,
+      "n_generated": 1195,
+      "delivery_ratio": 0.6108786610878661,
+      "mean_valid_latency": 3.5575342465753423
+    }
+  },
+  {
+    "trial": 4,
+    "seed": 7004,
+    "protocol": "spray",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3488,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 223232,
+      "stale_bytes": 0,
+      "n_delivered": 1192,
+      "n_generated": 1195,
+      "delivery_ratio": 0.9974895397489539,
+      "mean_valid_latency": 2.396812080536913
+    }
+  },
+  {
+    "trial": 4,
+    "seed": 7004,
+    "protocol": "spray",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3625,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 232000,
+      "stale_bytes": 0,
+      "n_delivered": 1188,
+      "n_generated": 1195,
+      "delivery_ratio": 0.994142259414226,
+      "mean_valid_latency": 2.6144781144781146
+    }
+  },
+  {
+    "trial": 4,
+    "seed": 7004,
+    "protocol": "prophet",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 8187,
+      "n_stale_copies": 5064,
+      "stale_copy_rate": 0.6185415903261268,
+      "total_bytes": 523968,
+      "stale_bytes": 324096,
+      "n_delivered": 745,
+      "n_generated": 1195,
+      "delivery_ratio": 0.6234309623430963,
+      "mean_valid_latency": 3.989261744966443
+    }
+  },
+  {
+    "trial": 4,
+    "seed": 7004,
+    "protocol": "prophet",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 2936,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 187904,
+      "stale_bytes": 0,
+      "n_delivered": 714,
+      "n_generated": 1195,
+      "delivery_ratio": 0.597489539748954,
+      "mean_valid_latency": 4.149859943977591
+    }
+  },
+  {
+    "trial": 5,
+    "seed": 7005,
+    "protocol": "epidemic",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 5636,
+      "n_stale_copies": 1366,
+      "stale_copy_rate": 0.24237047551454932,
+      "total_bytes": 360704,
+      "stale_bytes": 87424,
+      "n_delivered": 736,
+      "n_generated": 1200,
+      "delivery_ratio": 0.6133333333333333,
+      "mean_valid_latency": 4.2139917695473255
+    }
+  },
+  {
+    "trial": 5,
+    "seed": 7005,
+    "protocol": "epidemic",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 4230,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 270720,
+      "stale_bytes": 0,
+      "n_delivered": 744,
+      "n_generated": 1200,
+      "delivery_ratio": 0.62,
+      "mean_valid_latency": 3.502688172043011
+    }
+  },
+  {
+    "trial": 5,
+    "seed": 7005,
+    "protocol": "spray",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3547,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 227008,
+      "stale_bytes": 0,
+      "n_delivered": 1192,
+      "n_generated": 1200,
+      "delivery_ratio": 0.9933333333333333,
+      "mean_valid_latency": 2.321308724832215
+    }
+  },
+  {
+    "trial": 5,
+    "seed": 7005,
+    "protocol": "spray",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3670,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 234880,
+      "stale_bytes": 0,
+      "n_delivered": 1198,
+      "n_generated": 1200,
+      "delivery_ratio": 0.9983333333333333,
+      "mean_valid_latency": 2.7253756260434057
+    }
+  },
+  {
+    "trial": 5,
+    "seed": 7005,
+    "protocol": "prophet",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 7767,
+      "n_stale_copies": 4695,
+      "stale_copy_rate": 0.604480494399382,
+      "total_bytes": 497088,
+      "stale_bytes": 300480,
+      "n_delivered": 761,
+      "n_generated": 1200,
+      "delivery_ratio": 0.6341666666666667,
+      "mean_valid_latency": 4.058124174372523
+    }
+  },
+  {
+    "trial": 5,
+    "seed": 7005,
+    "protocol": "prophet",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3013,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 192832,
+      "stale_bytes": 0,
+      "n_delivered": 743,
+      "n_generated": 1200,
+      "delivery_ratio": 0.6191666666666666,
+      "mean_valid_latency": 3.940780619111709
+    }
+  },
+  {
+    "trial": 6,
+    "seed": 7006,
+    "protocol": "epidemic",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 5884,
+      "n_stale_copies": 1358,
+      "stale_copy_rate": 0.2307953772943576,
+      "total_bytes": 376576,
+      "stale_bytes": 86912,
+      "n_delivered": 781,
+      "n_generated": 1252,
+      "delivery_ratio": 0.6238019169329073,
+      "mean_valid_latency": 3.7243589743589745
+    }
+  },
+  {
+    "trial": 6,
+    "seed": 7006,
+    "protocol": "epidemic",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 4458,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 285312,
+      "stale_bytes": 0,
+      "n_delivered": 804,
+      "n_generated": 1252,
+      "delivery_ratio": 0.6421725239616614,
+      "mean_valid_latency": 3.691542288557214
+    }
+  },
+  {
+    "trial": 6,
+    "seed": 7006,
+    "protocol": "spray",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3982,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 254848,
+      "stale_bytes": 0,
+      "n_delivered": 1249,
+      "n_generated": 1252,
+      "delivery_ratio": 0.9976038338658147,
+      "mean_valid_latency": 2.8022417934347477
+    }
+  },
+  {
+    "trial": 6,
+    "seed": 7006,
+    "protocol": "spray",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3663,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 234432,
+      "stale_bytes": 0,
+      "n_delivered": 1249,
+      "n_generated": 1252,
+      "delivery_ratio": 0.9976038338658147,
+      "mean_valid_latency": 2.4947958366693355
+    }
+  },
+  {
+    "trial": 6,
+    "seed": 7006,
+    "protocol": "prophet",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 8021,
+      "n_stale_copies": 5046,
+      "stale_copy_rate": 0.6290986161326518,
+      "total_bytes": 513344,
+      "stale_bytes": 322944,
+      "n_delivered": 755,
+      "n_generated": 1252,
+      "delivery_ratio": 0.603035143769968,
+      "mean_valid_latency": 4.685828877005347
+    }
+  },
+  {
+    "trial": 6,
+    "seed": 7006,
+    "protocol": "prophet",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3332,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 213248,
+      "stale_bytes": 0,
+      "n_delivered": 798,
+      "n_generated": 1252,
+      "delivery_ratio": 0.6373801916932907,
+      "mean_valid_latency": 4.171679197994988
+    }
+  },
+  {
+    "trial": 7,
+    "seed": 7007,
+    "protocol": "epidemic",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 5358,
+      "n_stale_copies": 1216,
+      "stale_copy_rate": 0.22695035460992907,
+      "total_bytes": 342912,
+      "stale_bytes": 77824,
+      "n_delivered": 742,
+      "n_generated": 1196,
+      "delivery_ratio": 0.6204013377926422,
+      "mean_valid_latency": 3.7112010796221324
+    }
+  },
+  {
+    "trial": 7,
+    "seed": 7007,
+    "protocol": "epidemic",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 4154,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 265856,
+      "stale_bytes": 0,
+      "n_delivered": 723,
+      "n_generated": 1196,
+      "delivery_ratio": 0.6045150501672241,
+      "mean_valid_latency": 3.9488243430152146
+    }
+  },
+  {
+    "trial": 7,
+    "seed": 7007,
+    "protocol": "spray",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3635,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 232640,
+      "stale_bytes": 0,
+      "n_delivered": 1190,
+      "n_generated": 1196,
+      "delivery_ratio": 0.9949832775919732,
+      "mean_valid_latency": 2.4756302521008404
+    }
+  },
+  {
+    "trial": 7,
+    "seed": 7007,
+    "protocol": "spray",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3570,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 228480,
+      "stale_bytes": 0,
+      "n_delivered": 1189,
+      "n_generated": 1196,
+      "delivery_ratio": 0.9941471571906354,
+      "mean_valid_latency": 2.698906644238856
+    }
+  },
+  {
+    "trial": 7,
+    "seed": 7007,
+    "protocol": "prophet",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 8137,
+      "n_stale_copies": 5219,
+      "stale_copy_rate": 0.6413911761091311,
+      "total_bytes": 520768,
+      "stale_bytes": 334016,
+      "n_delivered": 727,
+      "n_generated": 1196,
+      "delivery_ratio": 0.6078595317725752,
+      "mean_valid_latency": 4.382147838214784
+    }
+  },
+  {
+    "trial": 7,
+    "seed": 7007,
+    "protocol": "prophet",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3001,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 192064,
+      "stale_bytes": 0,
+      "n_delivered": 745,
+      "n_generated": 1196,
+      "delivery_ratio": 0.6229096989966555,
+      "mean_valid_latency": 4.17986577181208
+    }
+  },
+  {
+    "trial": 8,
+    "seed": 7008,
+    "protocol": "epidemic",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 6011,
+      "n_stale_copies": 1531,
+      "stale_copy_rate": 0.25469971718516055,
+      "total_bytes": 384704,
+      "stale_bytes": 97984,
+      "n_delivered": 776,
+      "n_generated": 1213,
+      "delivery_ratio": 0.6397361912613355,
+      "mean_valid_latency": 3.5142118863049094
+    }
+  },
+  {
+    "trial": 8,
+    "seed": 7008,
+    "protocol": "epidemic",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 4132,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 264448,
+      "stale_bytes": 0,
+      "n_delivered": 744,
+      "n_generated": 1213,
+      "delivery_ratio": 0.6133553173948887,
+      "mean_valid_latency": 4.323924731182796
+    }
+  },
+  {
+    "trial": 8,
+    "seed": 7008,
+    "protocol": "spray",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3618,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 231552,
+      "stale_bytes": 0,
+      "n_delivered": 1211,
+      "n_generated": 1213,
+      "delivery_ratio": 0.998351195383347,
+      "mean_valid_latency": 2.402972749793559
+    }
+  },
+  {
+    "trial": 8,
+    "seed": 7008,
+    "protocol": "spray",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3620,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 231680,
+      "stale_bytes": 0,
+      "n_delivered": 1212,
+      "n_generated": 1213,
+      "delivery_ratio": 0.9991755976916735,
+      "mean_valid_latency": 2.597359735973597
+    }
+  },
+  {
+    "trial": 8,
+    "seed": 7008,
+    "protocol": "prophet",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 7991,
+      "n_stale_copies": 4881,
+      "stale_copy_rate": 0.6108121636841447,
+      "total_bytes": 511424,
+      "stale_bytes": 312384,
+      "n_delivered": 759,
+      "n_generated": 1213,
+      "delivery_ratio": 0.6257213520197856,
+      "mean_valid_latency": 4.154761904761905
+    }
+  },
+  {
+    "trial": 8,
+    "seed": 7008,
+    "protocol": "prophet",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3006,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 192384,
+      "stale_bytes": 0,
+      "n_delivered": 727,
+      "n_generated": 1213,
+      "delivery_ratio": 0.5993404781533388,
+      "mean_valid_latency": 4.370013755158184
+    }
+  },
+  {
+    "trial": 9,
+    "seed": 7009,
+    "protocol": "epidemic",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 5351,
+      "n_stale_copies": 1248,
+      "stale_copy_rate": 0.23322743412446273,
+      "total_bytes": 342464,
+      "stale_bytes": 79872,
+      "n_delivered": 710,
+      "n_generated": 1160,
+      "delivery_ratio": 0.6120689655172413,
+      "mean_valid_latency": 3.4710860366713683
+    }
+  },
+  {
+    "trial": 9,
+    "seed": 7009,
+    "protocol": "epidemic",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 4044,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 258816,
+      "stale_bytes": 0,
+      "n_delivered": 706,
+      "n_generated": 1160,
+      "delivery_ratio": 0.6086206896551725,
+      "mean_valid_latency": 3.3342776203966005
+    }
+  },
+  {
+    "trial": 9,
+    "seed": 7009,
+    "protocol": "spray",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3373,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 215872,
+      "stale_bytes": 0,
+      "n_delivered": 1157,
+      "n_generated": 1160,
+      "delivery_ratio": 0.9974137931034482,
+      "mean_valid_latency": 2.407439446366782
+    }
+  },
+  {
+    "trial": 9,
+    "seed": 7009,
+    "protocol": "spray",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3486,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 223104,
+      "stale_bytes": 0,
+      "n_delivered": 1157,
+      "n_generated": 1160,
+      "delivery_ratio": 0.9974137931034482,
+      "mean_valid_latency": 2.5868625756266206
+    }
+  },
+  {
+    "trial": 9,
+    "seed": 7009,
+    "protocol": "prophet",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 7831,
+      "n_stale_copies": 5022,
+      "stale_copy_rate": 0.6412974077384753,
+      "total_bytes": 501184,
+      "stale_bytes": 321408,
+      "n_delivered": 723,
+      "n_generated": 1160,
+      "delivery_ratio": 0.6232758620689656,
+      "mean_valid_latency": 4.231520223152022
+    }
+  },
+  {
+    "trial": 9,
+    "seed": 7009,
+    "protocol": "prophet",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 2836,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 181504,
+      "stale_bytes": 0,
+      "n_delivered": 705,
+      "n_generated": 1160,
+      "delivery_ratio": 0.6077586206896551,
+      "mean_valid_latency": 4.283687943262412
+    }
+  },
+  {
+    "trial": 10,
+    "seed": 7010,
+    "protocol": "epidemic",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 5723,
+      "n_stale_copies": 1370,
+      "stale_copy_rate": 0.23938493796959637,
+      "total_bytes": 366272,
+      "stale_bytes": 87680,
+      "n_delivered": 766,
+      "n_generated": 1209,
+      "delivery_ratio": 0.6335814722911497,
+      "mean_valid_latency": 3.5673202614379087
+    }
+  },
+  {
+    "trial": 10,
+    "seed": 7010,
+    "protocol": "epidemic",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 4425,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 283200,
+      "stale_bytes": 0,
+      "n_delivered": 767,
+      "n_generated": 1209,
+      "delivery_ratio": 0.6344086021505376,
+      "mean_valid_latency": 3.395045632333768
+    }
+  },
+  {
+    "trial": 10,
+    "seed": 7010,
+    "protocol": "spray",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3700,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 236800,
+      "stale_bytes": 0,
+      "n_delivered": 1204,
+      "n_generated": 1209,
+      "delivery_ratio": 0.9958643507030603,
+      "mean_valid_latency": 2.760598503740648
+    }
+  },
+  {
+    "trial": 10,
+    "seed": 7010,
+    "protocol": "spray",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3533,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 226112,
+      "stale_bytes": 0,
+      "n_delivered": 1204,
+      "n_generated": 1209,
+      "delivery_ratio": 0.9958643507030603,
+      "mean_valid_latency": 2.4601328903654487
+    }
+  },
+  {
+    "trial": 10,
+    "seed": 7010,
+    "protocol": "prophet",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 8183,
+      "n_stale_copies": 5024,
+      "stale_copy_rate": 0.6139557619454967,
+      "total_bytes": 523712,
+      "stale_bytes": 321536,
+      "n_delivered": 754,
+      "n_generated": 1209,
+      "delivery_ratio": 0.6236559139784946,
+      "mean_valid_latency": 4.168
+    }
+  },
+  {
+    "trial": 10,
+    "seed": 7010,
+    "protocol": "prophet",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3045,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 194880,
+      "stale_bytes": 0,
+      "n_delivered": 765,
+      "n_generated": 1209,
+      "delivery_ratio": 0.6327543424317618,
+      "mean_valid_latency": 4.623529411764705
+    }
+  },
+  {
+    "trial": 11,
+    "seed": 7011,
+    "protocol": "epidemic",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 5612,
+      "n_stale_copies": 1320,
+      "stale_copy_rate": 0.23521026372059872,
+      "total_bytes": 359168,
+      "stale_bytes": 84480,
+      "n_delivered": 735,
+      "n_generated": 1217,
+      "delivery_ratio": 0.6039441248972884,
+      "mean_valid_latency": 3.8448979591836734
+    }
+  },
+  {
+    "trial": 11,
+    "seed": 7011,
+    "protocol": "epidemic",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 4383,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 280512,
+      "stale_bytes": 0,
+      "n_delivered": 763,
+      "n_generated": 1217,
+      "delivery_ratio": 0.6269515201314708,
+      "mean_valid_latency": 3.4338138925294888
+    }
+  },
+  {
+    "trial": 11,
+    "seed": 7011,
+    "protocol": "spray",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3636,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 232704,
+      "stale_bytes": 0,
+      "n_delivered": 1213,
+      "n_generated": 1217,
+      "delivery_ratio": 0.9967132292522597,
+      "mean_valid_latency": 2.641089108910891
+    }
+  },
+  {
+    "trial": 11,
+    "seed": 7011,
+    "protocol": "spray",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3648,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 233472,
+      "stale_bytes": 0,
+      "n_delivered": 1209,
+      "n_generated": 1217,
+      "delivery_ratio": 0.9934264585045193,
+      "mean_valid_latency": 2.5062034739454093
+    }
+  },
+  {
+    "trial": 11,
+    "seed": 7011,
+    "protocol": "prophet",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 8397,
+      "n_stale_copies": 5378,
+      "stale_copy_rate": 0.6404668333928784,
+      "total_bytes": 537408,
+      "stale_bytes": 344192,
+      "n_delivered": 764,
+      "n_generated": 1217,
+      "delivery_ratio": 0.6277732128184059,
+      "mean_valid_latency": 3.9697766097240472
+    }
+  },
+  {
+    "trial": 11,
+    "seed": 7011,
+    "protocol": "prophet",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 2990,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 191360,
+      "stale_bytes": 0,
+      "n_delivered": 754,
+      "n_generated": 1217,
+      "delivery_ratio": 0.6195562859490551,
+      "mean_valid_latency": 4.708222811671088
+    }
+  },
+  {
+    "trial": 12,
+    "seed": 7012,
+    "protocol": "epidemic",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 5534,
+      "n_stale_copies": 1352,
+      "stale_copy_rate": 0.2443079147090712,
+      "total_bytes": 354176,
+      "stale_bytes": 86528,
+      "n_delivered": 732,
+      "n_generated": 1224,
+      "delivery_ratio": 0.5980392156862745,
+      "mean_valid_latency": 3.347945205479452
+    }
+  },
+  {
+    "trial": 12,
+    "seed": 7012,
+    "protocol": "epidemic",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 4243,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 271552,
+      "stale_bytes": 0,
+      "n_delivered": 758,
+      "n_generated": 1224,
+      "delivery_ratio": 0.619281045751634,
+      "mean_valid_latency": 3.7401055408970976
+    }
+  },
+  {
+    "trial": 12,
+    "seed": 7012,
+    "protocol": "spray",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3682,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 235648,
+      "stale_bytes": 0,
+      "n_delivered": 1220,
+      "n_generated": 1224,
+      "delivery_ratio": 0.9967320261437909,
+      "mean_valid_latency": 2.6554552912223133
+    }
+  },
+  {
+    "trial": 12,
+    "seed": 7012,
+    "protocol": "spray",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3756,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 240384,
+      "stale_bytes": 0,
+      "n_delivered": 1220,
+      "n_generated": 1224,
+      "delivery_ratio": 0.9967320261437909,
+      "mean_valid_latency": 2.5581967213114756
+    }
+  },
+  {
+    "trial": 12,
+    "seed": 7012,
+    "protocol": "prophet",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 8263,
+      "n_stale_copies": 5321,
+      "stale_copy_rate": 0.6439549800314656,
+      "total_bytes": 528832,
+      "stale_bytes": 340544,
+      "n_delivered": 737,
+      "n_generated": 1224,
+      "delivery_ratio": 0.6021241830065359,
+      "mean_valid_latency": 4.512261580381471
+    }
+  },
+  {
+    "trial": 12,
+    "seed": 7012,
+    "protocol": "prophet",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3108,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 198912,
+      "stale_bytes": 0,
+      "n_delivered": 768,
+      "n_generated": 1224,
+      "delivery_ratio": 0.6274509803921569,
+      "mean_valid_latency": 4.58203125
+    }
+  },
+  {
+    "trial": 13,
+    "seed": 7013,
+    "protocol": "epidemic",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 5308,
+      "n_stale_copies": 1266,
+      "stale_copy_rate": 0.2385079125847777,
+      "total_bytes": 339712,
+      "stale_bytes": 81024,
+      "n_delivered": 706,
+      "n_generated": 1186,
+      "delivery_ratio": 0.5952782462057336,
+      "mean_valid_latency": 3.425531914893617
+    }
+  },
+  {
+    "trial": 13,
+    "seed": 7013,
+    "protocol": "epidemic",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 4191,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 268224,
+      "stale_bytes": 0,
+      "n_delivered": 730,
+      "n_generated": 1186,
+      "delivery_ratio": 0.6155143338954469,
+      "mean_valid_latency": 3.6205479452054794
+    }
+  },
+  {
+    "trial": 13,
+    "seed": 7013,
+    "protocol": "spray",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3581,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 229184,
+      "stale_bytes": 0,
+      "n_delivered": 1182,
+      "n_generated": 1186,
+      "delivery_ratio": 0.9966273187183811,
+      "mean_valid_latency": 2.6624365482233503
+    }
+  },
+  {
+    "trial": 13,
+    "seed": 7013,
+    "protocol": "spray",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3575,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 228800,
+      "stale_bytes": 0,
+      "n_delivered": 1185,
+      "n_generated": 1186,
+      "delivery_ratio": 0.9991568296795953,
+      "mean_valid_latency": 2.6092827004219408
+    }
+  },
+  {
+    "trial": 13,
+    "seed": 7013,
+    "protocol": "prophet",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 7909,
+      "n_stale_copies": 5001,
+      "stale_copy_rate": 0.6323176128461246,
+      "total_bytes": 506176,
+      "stale_bytes": 320064,
+      "n_delivered": 715,
+      "n_generated": 1186,
+      "delivery_ratio": 0.602866779089376,
+      "mean_valid_latency": 4.405063291139241
+    }
+  },
+  {
+    "trial": 13,
+    "seed": 7013,
+    "protocol": "prophet",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 2936,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 187904,
+      "stale_bytes": 0,
+      "n_delivered": 733,
+      "n_generated": 1186,
+      "delivery_ratio": 0.6180438448566611,
+      "mean_valid_latency": 4.144611186903138
+    }
+  },
+  {
+    "trial": 14,
+    "seed": 7014,
+    "protocol": "epidemic",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 5448,
+      "n_stale_copies": 1287,
+      "stale_copy_rate": 0.23623348017621146,
+      "total_bytes": 348672,
+      "stale_bytes": 82368,
+      "n_delivered": 720,
+      "n_generated": 1196,
+      "delivery_ratio": 0.6020066889632107,
+      "mean_valid_latency": 3.6457461645746165
+    }
+  },
+  {
+    "trial": 14,
+    "seed": 7014,
+    "protocol": "epidemic",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3982,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 254848,
+      "stale_bytes": 0,
+      "n_delivered": 691,
+      "n_generated": 1196,
+      "delivery_ratio": 0.5777591973244147,
+      "mean_valid_latency": 3.516642547033285
+    }
+  },
+  {
+    "trial": 14,
+    "seed": 7014,
+    "protocol": "spray",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3611,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 231104,
+      "stale_bytes": 0,
+      "n_delivered": 1196,
+      "n_generated": 1196,
+      "delivery_ratio": 1.0,
+      "mean_valid_latency": 2.765886287625418
+    }
+  },
+  {
+    "trial": 14,
+    "seed": 7014,
+    "protocol": "spray",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3504,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 224256,
+      "stale_bytes": 0,
+      "n_delivered": 1192,
+      "n_generated": 1196,
+      "delivery_ratio": 0.9966555183946488,
+      "mean_valid_latency": 2.658557046979866
+    }
+  },
+  {
+    "trial": 14,
+    "seed": 7014,
+    "protocol": "prophet",
+    "mode": "naive",
+    "ok": true,
+    "metrics": {
+      "n_copies": 8132,
+      "n_stale_copies": 5134,
+      "stale_copy_rate": 0.6313330054107231,
+      "total_bytes": 520448,
+      "stale_bytes": 328576,
+      "n_delivered": 746,
+      "n_generated": 1196,
+      "delivery_ratio": 0.6237458193979933,
+      "mean_valid_latency": 4.177897574123989
+    }
+  },
+  {
+    "trial": 14,
+    "seed": 7014,
+    "protocol": "prophet",
+    "mode": "expiry_aware",
+    "ok": true,
+    "metrics": {
+      "n_copies": 3043,
+      "n_stale_copies": 0,
+      "stale_copy_rate": 0.0,
+      "total_bytes": 194752,
+      "stale_bytes": 0,
+      "n_delivered": 744,
+      "n_generated": 1196,
+      "delivery_ratio": 0.6220735785953178,
+      "mean_valid_latency": 4.689516129032258
+    }
+  }
+]

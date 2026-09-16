@@ -1,0 +1,233 @@
+{
+  "experiment_name": "ArogyaTwin Evaluation \u2014 Main 30-Trial Experiment",
+  "execution_timestamp": "2026-09-16T12:22:00.359343",
+  "python_version": "3.13.7",
+  "numpy_version": "2.5.2",
+  "scipy_version": "1.18.1",
+  "git_hash": "N/A (git not initialized)",
+  "canonical_source_paths": {
+    "description": "All simulation logic lives in sim/. Root-level core.py/engine.py/metrics.py are byte-identical originals; sim/ copies are the authoritative imported versions (verified by SHA-256). Comment-only edit made to sim/core.py to remove unsupported 'grid search' language.",
+    "sim_core": "sim/core.py",
+    "sim_engine": "sim/engine.py",
+    "sim_metrics": "sim/metrics.py",
+    "root_duplicates": [
+      "core.py",
+      "engine.py",
+      "metrics.py"
+    ],
+    "root_duplicates_status": "byte-identical to sim/ copies; never imported by Python",
+    "never_imported": [
+      "engine (1).py",
+      "engine (2).py"
+    ]
+  },
+  "main_experiment": {
+    "scenario": "long_outage",
+    "n_trials": 30,
+    "seed_base": 8000,
+    "seed_range": "8000-8029",
+    "seed_formula": "seed = 8000 + trial_index  (trial_index 0..29)",
+    "configuration_list": [
+      "centralized_raw",
+      "fixed_ttl",
+      "fixed_trust",
+      "no_signature",
+      "no_expiry",
+      "no_diversity",
+      "full"
+    ],
+    "total_trial_config_pairs": 210,
+    "successful_pairs": 210,
+    "failed_pairs": 0,
+    "crn_note": "Each configuration within a trial shares the same integer seed. generate_ground_truth(rng) is called first, so the synthetic outbreak/firing ground truth is identical across configs for a given seed (partial CRN). The contact-opportunity and relay-dynamics sequences diverge per config because each config draws differently from the same-seeded RNG thereafter."
+  },
+  "queue_trace_experiment_fig10": {
+    "description": "Figure 10 is a SEPARATE 10-trial queue-trace visualization experiment. The original make_figures.py uses seeds 8500-8509 for Figure 10, distinct from the main experiment seed block (8000-8029). This is the ORIGINAL DESIGN in the source file: the title in the source explicitly states 'mean of 10 trials'. This is Outcome A \u2014 intentional separate experiment.",
+    "n_trials": 10,
+    "seed_range": "8500-8509",
+    "configs": [
+      "centralized_raw",
+      "fixed_ttl",
+      "full"
+    ],
+    "metric": "peak of mean queue trace (mean across trials first, then max)",
+    "results": {
+      "centralized_raw": {
+        "peak_of_mean_trace": 34.0,
+        "mean_of_per_trial_peaks": 34.33
+      },
+      "fixed_ttl": {
+        "peak_of_mean_trace": 9.17,
+        "mean_of_per_trial_peaks": 9.83
+      },
+      "full": {
+        "peak_of_mean_trace": 9.52,
+        "mean_of_per_trial_peaks": 10.08
+      }
+    },
+    "NOT_same_sample_as_main_experiment": true
+  },
+  "dtn_experiment": {
+    "description": "Separate DTN relay sub-experiment (Section 6.7). See dtn_results.json.",
+    "source_file": "dtn.py",
+    "n_trials": 15,
+    "seed_offset": 7000,
+    "seed_range": "7000-7014",
+    "protocols": [
+      "epidemic",
+      "spray",
+      "prophet"
+    ],
+    "modes": {
+      "naive": "no expiry check before relay",
+      "expiry_aware": "ArogyaTwin TTL expiry applied before each relay/copy decision"
+    },
+    "total_trial_protocol_mode_pairs": 90,
+    "successful_pairs": 90,
+    "failed_pairs": 0,
+    "NOT_mixed_into_main_experiment": true
+  },
+  "simulation": {
+    "horizon_hours": 720,
+    "horizon_days": 30,
+    "n_villages": 6,
+    "sources_per_village": 5,
+    "outbreak_1": {
+      "village": 1,
+      "onset": 300,
+      "duration": 150,
+      "ramp": 12,
+      "p_fire": 0.4,
+      "true_frac": 0.85
+    },
+    "outbreak_2": {
+      "village": 4,
+      "onset": 480,
+      "duration": 120,
+      "ramp": 12,
+      "p_fire": 0.4,
+      "true_frac": 0.85
+    },
+    "adversarial_village": 2,
+    "adversarial_window": [
+      192,
+      216
+    ]
+  },
+  "packet_sizes": {
+    "raw_bytes": 512,
+    "compact_bytes": 64,
+    "raw_to_compact_reduction_pct": 87.5,
+    "note": "bytes_per_event (measured communication cost) != packet size. Full ArogyaTwin bytes_per_event \u2248 53.67 B because proactive_discards increase n_generated denominator without adding transmitted bytes."
+  },
+  "trust_weights": {
+    "values": {
+      "w_H": 0.35,
+      "w_C": 0.2,
+      "w_A": 0.3,
+      "w_D": 0.15
+    },
+    "evidence_status": "SELECTED CONFIGURATION. The values w_H=0.35, w_C=0.20, w_A=0.30, w_D=0.15 are hard-coded in sim/core.py. No grid-search or optimization procedure exists in this repository. The code comment previously claimed 'selected by grid search' but this is unsupported. Comment corrected to: 'selected configuration; no grid-search code in this repository'.",
+    "h_alpha": 0.2,
+    "h_prior": 0.6,
+    "verification_delay_hours": 48
+  },
+  "ttl": {
+    "min_hours": 2,
+    "max_hours": 96,
+    "b_l": 0.35,
+    "b_t": 10.0,
+    "candidate_min_sources": 3
+  },
+  "statistical_method": {
+    "description": "t-distribution 95% CI, ddof=1",
+    "formula": "sd=np.std(ddof=1), se=sd/sqrt(n), tcrit=t.ppf(0.975, n-1), margin=tcrit*se",
+    "n_per_metric": 30
+  },
+  "figure_data_sources": {
+    "fig7_latency_cdf": {
+      "source": "Live run_trial(), 10 trials, seeds 8000-8009",
+      "configs": [
+        "full",
+        "fixed_ttl",
+        "centralized_raw"
+      ],
+      "n_trials": 10,
+      "same_as_main_experiment": "Seeds 8000-8009 are a SUBSET of the main 8000-8029 block"
+    },
+    "fig8_stale_handling": {
+      "source": "results.json (30-trial main experiment)",
+      "configs": [
+        "centralized_raw",
+        "no_expiry",
+        "fixed_ttl",
+        "fixed_trust",
+        "no_diversity",
+        "full"
+      ],
+      "n_trials": 30
+    },
+    "fig9_bandwidth": {
+      "source": "results.json (30-trial main experiment)",
+      "configs": [
+        "centralized_raw",
+        "no_signature",
+        "fixed_ttl",
+        "fixed_trust",
+        "no_diversity",
+        "full"
+      ],
+      "n_trials": 30
+    },
+    "fig10_queue_occupancy": {
+      "source": "Separate 10-trial queue-trace experiment, seeds 8500-8509",
+      "configs": [
+        "centralized_raw",
+        "fixed_ttl",
+        "full"
+      ],
+      "n_trials": 10,
+      "NOT_same_sample_as_main": true
+    },
+    "fig11_ablation_precision": {
+      "source": "results.json (30-trial main experiment)",
+      "configs": [
+        "centralized_raw",
+        "no_signature",
+        "fixed_trust",
+        "fixed_ttl",
+        "no_diversity",
+        "full"
+      ],
+      "n_trials": 30
+    },
+    "fig12_trust_calibration": {
+      "source": "Separate 10-trial trust-trace experiment, seeds 8600-8609",
+      "n_trials": 10,
+      "NOT_same_sample_as_main": true
+    }
+  },
+  "output_files": {
+    "main_experiment": [
+      "results_trials.json",
+      "results.json"
+    ],
+    "dtn_experiment": [
+      "dtn_results_trials.json",
+      "dtn_results.json",
+      "dtn_experiment_manifest.json"
+    ],
+    "figures": [
+      "fig7_latency_cdf.png",
+      "fig8_stale_handling.png",
+      "fig9_bandwidth.png",
+      "fig10_queue_occupancy.png",
+      "fig11_ablation_precision.png",
+      "fig12_trust_calibration.png"
+    ],
+    "reports": [
+      "FINAL_EXPERIMENT_REPORT.md",
+      "experiment_manifest.json"
+    ]
+  }
+}

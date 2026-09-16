@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+sim/__pycache__/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.bak
+*.swp
+
+# Manuscripts and private documents
+*.docx
+*.pdf
+
+# Legacy/internal scripts and duplicate files
+engine (*).py
+* (1).*
+* (2).*
+helpers.js
+sec*.js
+smoke_test.py
+verify_numbers.py
+inspect_results.py
+update_manifest.py
+make_figures_exec.py
+FINAL_EXPERIMENT_REPORT.md
+
+# Authoritative simulation code lives in sim/
+/core.py
+/engine.py
+/metrics.py
