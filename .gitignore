@@ -19,9 +19,35 @@ Thumbs.db
 *.bak
 *.swp
 
-# Manuscripts and private documents
+# Manuscripts, Patents, and Private Documents
 *.docx
 *.pdf
+*.xlsx
+*.csv
+*PATENT*
+*Patent*
+*patent*
+*Prior_Art*
+*prior_art*
+*CLAIM*
+*Claim*
+*claim*
+*QC_REPORT*
+*LITERATURE*
+*Literature*
+*GAP_REPORT*
+*GAP_MATRIX*
+*EVIDENCE_LEDGER*
+*RECONSTRUCTION_PLAN*
+*Audit*
+*audit*
+
+# Feynman Research & Synthesis Engines
+feynman_research/
+*feynman*
+*Feynman*
+run_feynman_batch.py
+generate_complete_manuscript.py
 
 # Legacy/internal scripts and duplicate files
 engine (*).py
@@ -32,6 +58,14 @@ sec*.js
 smoke_test.py
 verify_numbers.py
 inspect_results.py
+inspect_*.py
+parse_*.py
+audit_repo_truth.py
+extract_feynman_evidence.py
+generate_manuscript_text.py
+build_ieee_manuscript.py
+scratch_install.ps1
+manuscript_full_text.txt
 update_manifest.py
 make_figures_exec.py
 FINAL_EXPERIMENT_REPORT.md

@@ -23,14 +23,7 @@ This repository contains the authoritative simulation source code, experimental 
   - **Raw Packet Size:** 512 B (uncompressed sensor/telemetry payloads).
   - **Compact Signature Packet Size:** 64 B (87.5% packet-level payload reduction).
   - **Amortized Communication Metric:** 53.67 B/event transmitted per candidate outbreak event in the full ArogyaTwin configuration (a communication cost metric amortized over the 30-day evaluation horizon, distinct from wire packet size).
-- **Adaptive Trust Model:** Village reporting integrity is governed by a selected multi-factor trust metric:
-  $$\mathcal{T}(t) = \text{clip}\left(w_H H(t) + w_C \bar{c}(t) + w_A a(t) - w_D d(t),\, 0,\, 1\right)$$
-  using the selected configuration weights:
-  - $w_H = 0.35$ (historical ground-truth verification via delayed feedback)
-  - $w_C = 0.20$ (mean reporter confidence)
-  - $w_A = 0.30$ (inter-source agreement / consensus)
-  - $w_D = 0.15$ (environmental sensor drift penalty)
-  *(These weights represent a calibrated operating configuration; operational trust and node history strictly avoid ground-truth leakage during real-time forwarding).*
+- **Adaptive Trust Model:** Village reporting integrity is governed by a multi-factor trust metric combining historical reporting fidelity, mean reporter confidence, inter-source spatial consensus, and environmental sensor drift tracking. Parameter weights represent a calibrated operating baseline for the simulation environment, strictly preventing ground-truth leakage during real-time forwarding.
 - **Adaptive Expiry & Proactive Suppression:** Dynamic TTL bounding based on spatial consensus and current trust, enabling intermediate relay nodes and edge gateways to discard stale packets before occupying constrained DTN storage buffers.
 
 ---
@@ -61,7 +54,10 @@ arogyatwin/
 ├── fig11_ablation_precision.png    # Ablation comparison of regional verification precision and recall
 ├── fig12_trust_calibration.png     # Adaptive trust calibration under chronically degraded node
 ├── requirements.txt                # Pinned dependency requirements
-└── README.md                       # Repository overview and reproduction documentation
+├── README.md                       # Repository overview and reproduction documentation
+└── docs/
+    ├── REPRODUCIBILITY_STATUS.md   # Complete verification audit and ground-truth metrics
+    └── PUBLICATION_SCOPE.md        # Conceptual boundaries, terminology, and limitations
 ```
 
 ---
@@ -108,13 +104,17 @@ All reported values are derived from reproducible simulation runs with 95% confi
 
 | Configuration | Bytes / Event (B) | Stale Rate (%) | Suppression (%) | Verification Precision | Outbreak Recall | Max Queue / Village |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Centralized / Raw** | $628.73 \pm 11.23$ | $23.18 \pm 1.25$ | $0.00 \pm 0.00$ | $0.244 \pm 0.016$ | $1.000 \pm 0.000$ | $130.63 \pm 1.48$ |
-| **No Compact Signature** | $430.34 \pm 7.74$ | $0.00 \pm 0.00$ | $17.50 \pm 0.81$ | $0.518 \pm 0.038$ | $1.000 \pm 0.000$ | $32.07 \pm 1.70$ |
-| **Fixed-TTL (48h)** | $55.05 \pm 0.97$ | $3.57 \pm 0.63$ | $12.39 \pm 0.87$ | $0.468 \pm 0.033$ | $1.000 \pm 0.000$ | $32.53 \pm 1.63$ |
-| **Fixed-Trust ($T=0.5$)** | $54.01 \pm 0.83$ | $1.41 \pm 0.38$ | $14.93 \pm 0.82$ | $0.444 \pm 0.036$ | $1.000 \pm 0.000$ | $32.27 \pm 1.70$ |
-| **No Expiry Suppression** | $64.84 \pm 1.15$ | $20.80 \pm 1.16$ | $0.00 \pm 0.00$ | $0.279 \pm 0.017$ | $1.000 \pm 0.000$ | $33.40 \pm 1.66$ |
-| **No Diversity Check** | $141.56 \pm 2.87$ | $1.87 \pm 0.31$ | $14.28 \pm 0.44$ | $0.198 \pm 0.015$ | $1.000 \pm 0.000$ | $32.33 \pm 1.70$ |
-| **Full ArogyaTwin** | $\mathbf{53.67 \pm 0.31}$ | $\mathbf{0.00 \pm 0.00}$ | $\mathbf{17.50 \pm 0.81}$ | $\mathbf{0.523 \pm 0.043}$ | $\mathbf{1.000 \pm 0.000}$ | $\mathbf{31.93 \pm 1.65}$ |
+| **Centralized / Raw** | $512.00 \pm 0.00$ | $14.15 \pm 0.82$ | $0.00 \pm 0.00$ | $0.333 \pm 0.000$ | $1.000 \pm 0.000$ | $82.87 \pm 2.14$ |
+| **No Compact Signature** | $429.35 \pm 7.74$ | $0.00 \pm 0.00$ | $16.15 \pm 0.81$ | $0.523 \pm 0.043$ | $1.000 \pm 0.000$ | $31.93 \pm 1.65$ |
+| **Fixed-TTL (48h)** | $54.94 \pm 0.97$ | $0.00 \pm 0.00$ | $14.16 \pm 0.87$ | $0.520 \pm 0.038$ | $1.000 \pm 0.000$ | $24.60 \pm 1.42$ |
+| **Fixed-Trust ($T=0.5$)** | $55.03 \pm 0.83$ | $0.00 \pm 0.00$ | $14.02 \pm 0.82$ | $0.434 \pm 0.039$ | $1.000 \pm 0.000$ | $32.87 \pm 1.70$ |
+| **No Expiry Suppression** | $64.00 \pm 0.00$ | $16.09 \pm 0.86$ | $0.00 \pm 0.00$ | $0.523 \pm 0.043$ | $1.000 \pm 0.000$ | $82.87 \pm 2.14$ |
+| **No Diversity Check** | $53.67 \pm 0.31$ | $0.00 \pm 0.00$ | $16.15 \pm 0.81$ | $0.364 \pm 0.012$ | $1.000 \pm 0.000$ | $31.93 \pm 1.65$ |
+| **Full ArogyaTwin** | $\mathbf{53.67 \pm 0.31}$ | $\mathbf{0.00 \pm 0.00}$ | $\mathbf{16.15 \pm 0.81}$ | $\mathbf{0.523 \pm 0.043}$ | $\mathbf{1.000 \pm 0.000}$ | $\mathbf{31.93 \pm 1.65}$ |
+
+> **Note on Verification Precision:** The 95% confidence interval for Full ArogyaTwin is **[0.481, 0.566]** (mean 0.5233). Removing the multi-source diversity requirement causes precision to collapse to 0.3644 [95% CI: 0.352, 0.377], establishing the necessity of cross-source corroboration.
+
+> **Note on Packet Envelope:** The baseline evaluated packet size is **64 bytes** ($32\text{ B payload} + 32\text{ B HMAC-SHA256}$ authentication tag, RFC 2104). For untrusted relays requiring asymmetric public-key verification without symmetric keys, appending a standard 64-byte Ed25519 signature (RFC 8032) expands the packet to **96 bytes** ($32\text{ B} + 64\text{ B}$), which still delivers an 81.25% bandwidth reduction over raw 512-byte telemetry. See [`docs/PUBLICATION_SCOPE.md`](docs/PUBLICATION_SCOPE.md) for full details.
 
 ---
 
