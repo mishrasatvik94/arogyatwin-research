@@ -24,6 +24,7 @@ from sim.core import (
     N_VILLAGES, SOURCES_PER_VILLAGE, HOURS, COMPACT_SIZE_BYTES,
     CANDIDATE_MIN_SOURCES, CANDIDATE_MIN_CONF, generate_ground_truth,
 )
+from sim.metrics import ci95
 
 # Import DTN functions from dtn.py at root (dtn.py itself uses 'from sim.core import ...')
 import importlib.util, os
@@ -90,26 +91,6 @@ print(f"\nDTN experiment: {n_ok}/{n_total} succeeded, {failed} failed")
 # =====================================================================
 # Aggregate statistics
 # =====================================================================
-def ci95(values):
-    vals = [v for v in values if v is not None and not (isinstance(v, float) and math.isnan(v))]
-    n = len(vals)
-    if n == 0:
-        return dict(n=0, mean=float("nan"), sd=float("nan"), se=float("nan"),
-                    ci95_margin=float("nan"), ci95_lo=float("nan"), ci95_hi=float("nan"))
-    from math import sqrt
-    arr = np.array(vals, dtype=float)
-    mean = float(np.mean(arr))
-    if n == 1:
-        sd, se, tcrit = 0.0, 0.0, 0.0
-    else:
-        sd = float(np.std(arr, ddof=1))
-        se = sd / sqrt(n)
-        tcrit = float(scipy.stats.t.ppf(0.975, n - 1))
-    margin = tcrit * se
-    return dict(n=n, mean=mean, sd=sd, se=se,
-                ci95_margin=margin, ci95_lo=mean - margin, ci95_hi=mean + margin)
-
-
 aggregated = {}
 for proto in PROTOCOLS:
     aggregated[proto] = {}

@@ -16,7 +16,7 @@ import numpy as np
 import scipy.stats
 
 from sim.engine import run_trial, CONFIGS
-from sim.metrics import compute_metrics
+from sim.metrics import compute_metrics, ci95
 from sim.core import (
     SCENARIOS, HOURS, COMPACT_SIZE_BYTES, RAW_SIZE_BYTES,
     TRUST_WEIGHTS, TTL_MIN, TTL_MAX, CANDIDATE_MIN_SOURCES,
@@ -56,27 +56,6 @@ def run_one(scenario, config, seed, trial_idx):
             ok=False, scenario=scenario, config=config, seed=seed, trial=trial_idx,
             error=str(e), traceback=traceback.format_exc()
         )
-
-
-def ci95(values):
-    vals = [v for v in values if v is not None and not (isinstance(v, float) and math.isnan(v))]
-    n = len(vals)
-    if n == 0:
-        return dict(n=0, mean=float("nan"), sd=float("nan"), se=float("nan"),
-                    ci95_margin=float("nan"), ci95_lo=float("nan"), ci95_hi=float("nan"))
-    arr = np.array(vals, dtype=float)
-    mean = float(np.mean(arr))
-    if n == 1:
-        sd = 0.0
-        se = 0.0
-        tcrit = 0.0
-    else:
-        sd = float(np.std(arr, ddof=1))
-        se = sd / sqrt(n)
-        tcrit = float(scipy.stats.t.ppf(0.975, n - 1))
-    margin = tcrit * se
-    return dict(n=n, mean=mean, sd=sd, se=se,
-                ci95_margin=margin, ci95_lo=mean - margin, ci95_hi=mean + margin)
 
 
 def aggregate_results(trial_rows):

@@ -1,10 +1,35 @@
+import math
+from math import sqrt
 import numpy as np
-from sim.core import OUTBREAK_1, OUTBREAK_2, DEGRADED_VILLAGE, ADVERSARIAL_VILLAGE, ADVERSARIAL_WINDOW, generate_ground_truth
+import scipy.stats
+from sim.core import (
+    OUTBREAK_1, OUTBREAK_2, DEGRADED_VILLAGE, ADVERSARIAL_VILLAGE, ADVERSARIAL_WINDOW,
+    HOURS, N_VILLAGES, SOURCES_PER_VILLAGE, generate_ground_truth,
+)
+
+
+def ci95(values):
+    vals = [v for v in values if v is not None and not (isinstance(v, float) and math.isnan(v))]
+    n = len(vals)
+    if n == 0:
+        return dict(n=0, mean=float("nan"), sd=float("nan"), se=float("nan"),
+                    ci95_margin=float("nan"), ci95_lo=float("nan"), ci95_hi=float("nan"))
+    arr = np.array(vals, dtype=float)
+    mean = float(np.mean(arr))
+    if n == 1:
+        sd = 0.0
+        se = 0.0
+        tcrit = 0.0
+    else:
+        sd = float(np.std(arr, ddof=1))
+        se = sd / sqrt(n)
+        tcrit = float(scipy.stats.t.ppf(0.975, n - 1))
+    margin = tcrit * se
+    return dict(n=n, mean=mean, sd=sd, se=se,
+                ci95_margin=margin, ci95_lo=mean - margin, ci95_hi=mean + margin)
 
 
 def compute_metrics(trial_result, seed):
-    import numpy as np
-    from sim.core import HOURS
     rng = np.random.default_rng(seed)
     fire, true_label, conf, accurate = generate_ground_truth(rng)  # regenerate identical ground truth (same seed)
 
@@ -50,14 +75,14 @@ def compute_metrics(trial_result, seed):
     recall = tp / (tp + fn) if (tp + fn) > 0 else float("nan")
 
     ground_truth_reliability = np.array([
-        accurate[v * 5:(v + 1) * 5].sum() / max(1, fire[v * 5:(v + 1) * 5].sum())
-        for v in range(6)
+        accurate[v * SOURCES_PER_VILLAGE:(v + 1) * SOURCES_PER_VILLAGE].sum() / max(1, fire[v * SOURCES_PER_VILLAGE:(v + 1) * SOURCES_PER_VILLAGE].sum())
+        for v in range(N_VILLAGES)
     ])
     H_final = trial_result["H_final"]
     calib_error = float(np.mean(np.abs(H_final - ground_truth_reliability)))
 
     degraded_bytes = sum(p["size"] for p in pkts if p["village"] == DEGRADED_VILLAGE)
-    reliable_villages = [v for v in range(6) if v not in (DEGRADED_VILLAGE, ADVERSARIAL_VILLAGE)]
+    reliable_villages = [v for v in range(N_VILLAGES) if v not in (DEGRADED_VILLAGE, ADVERSARIAL_VILLAGE)]
     reliable_bytes = sum(p["size"] for p in pkts if p["village"] in reliable_villages)
     degraded_share = degraded_bytes / total_bytes if total_bytes else float("nan")
 

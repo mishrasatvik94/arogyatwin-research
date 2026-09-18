@@ -69,7 +69,7 @@ The paper reports findings from three distinct, strictly separated experimental 
 ### 1. Main ArogyaTwin Experiment
 - **Configurations Evaluated (7):**
   1. `centralized_raw` (Baseline: 512 B raw packets, no expiry, no trust)
-  2. `fixed_ttl` (64 B compact, fixed 48h TTL, no adaptive trust)
+  2. `fixed_ttl` (64 B compact, fixed 24h TTL, no adaptive trust)
   3. `fixed_trust` (64 B compact, static trust $T=0.5$, adaptive TTL)
   4. `no_signature` (512 B raw packets, adaptive TTL and trust)
   5. `no_expiry` (64 B compact, no TTL suppression)
@@ -106,11 +106,13 @@ All reported values are derived from reproducible simulation runs with 95% confi
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Centralized / Raw** | $512.00 \pm 0.00$ | $14.15 \pm 0.82$ | $0.00 \pm 0.00$ | $0.333 \pm 0.000$ | $1.000 \pm 0.000$ | $82.87 \pm 2.14$ |
 | **No Compact Signature** | $429.35 \pm 7.74$ | $0.00 \pm 0.00$ | $16.15 \pm 0.81$ | $0.523 \pm 0.043$ | $1.000 \pm 0.000$ | $31.93 \pm 1.65$ |
-| **Fixed-TTL (48h)** | $54.94 \pm 0.97$ | $0.00 \pm 0.00$ | $14.16 \pm 0.87$ | $0.520 \pm 0.038$ | $1.000 \pm 0.000$ | $24.60 \pm 1.42$ |
+| **Fixed-TTL (24h)** | $54.94 \pm 0.97$ | $0.00 \pm 0.00$ | $14.16 \pm 0.87$ | $0.520 \pm 0.038$ | $1.000 \pm 0.000$ | $24.60 \pm 1.42$ |
 | **Fixed-Trust ($T=0.5$)** | $55.03 \pm 0.83$ | $0.00 \pm 0.00$ | $14.02 \pm 0.82$ | $0.434 \pm 0.039$ | $1.000 \pm 0.000$ | $32.87 \pm 1.70$ |
 | **No Expiry Suppression** | $64.00 \pm 0.00$ | $16.09 \pm 0.86$ | $0.00 \pm 0.00$ | $0.523 \pm 0.043$ | $1.000 \pm 0.000$ | $82.87 \pm 2.14$ |
 | **No Diversity Check** | $53.67 \pm 0.31$ | $0.00 \pm 0.00$ | $16.15 \pm 0.81$ | $0.364 \pm 0.012$ | $1.000 \pm 0.000$ | $31.93 \pm 1.65$ |
 | **Full ArogyaTwin** | $\mathbf{53.67 \pm 0.31}$ | $\mathbf{0.00 \pm 0.00}$ | $\mathbf{16.15 \pm 0.81}$ | $\mathbf{0.523 \pm 0.043}$ | $\mathbf{1.000 \pm 0.000}$ | $\mathbf{31.93 \pm 1.65}$ |
+
+> **Note on Fixed-TTL Baseline:** The published benchmark evaluates a 24-hour fixed-TTL baseline (`FIXED_TTL_HOURS = 24`), reflecting typical daily epidemic reporting intervals in intermittent rural networks.
 
 > **Note on Verification Precision:** The 95% confidence interval for Full ArogyaTwin is **[0.481, 0.566]** (mean 0.5233). Removing the multi-source diversity requirement causes precision to collapse to 0.3644 [95% CI: 0.352, 0.377], establishing the necessity of cross-source corroboration.
 

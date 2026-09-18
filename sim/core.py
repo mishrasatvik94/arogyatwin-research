@@ -12,7 +12,6 @@ scenario, source, trust, and TTL parameters are listed in CONFIG below and
 are also reported in the manuscript (Section 5).
 """
 import numpy as np
-from dataclasses import dataclass, field
 
 # ----------------------------------------------------------------------
 # Global configuration (reported in manuscript Table 5)
